@@ -1,0 +1,88 @@
+
+POST http://localhost:3001/api/v1/products/create
+content-type: application/json
+
+{
+    "product_name":"MATURE",
+    "brand_id":2,
+    "third_party_url":222222,
+    "dimention_id":1,
+    "product_desc":1,
+    "product_designer":2,
+    "product_images":["adsf","sdfd","adsefsf"],
+    "product_dimension":2,
+    "product_features":["adsf","sdfd","adsefsf"],
+    "product_multiple":1,
+    "created_by":22,
+    "logistic_type":2,
+    "main_category_id":10,
+    "sub_category_id":22
+}
+
+###
+POST http://localhost:3001/api/v1/products/create/main/category
+content-type: application/json
+
+{
+    "main_category_name":"mc_3"
+}
+
+###
+POST http://localhost:3001/api/v1/products/update/active
+content-type: application/json
+
+{
+    "product_id": 7,
+    "active_status": 0
+}
+
+###
+POST http://localhost:3001/api/v1/products/create/sub/category
+content-type: application/json
+
+{
+    "sub_category_name":"sc_14",
+    "main_category_id":10
+}
+###
+
+POST http://localhost:3001/api/v1/products/create/brand
+content-type: application/json
+
+{
+    "brand_name":"mc_3"
+}
+###
+POST http://localhost:3001/api/v1/products/create/main/category
+content-type: application/json
+
+{
+    "main_category_name":"mc_3"
+}
+###
+GET  http://localhost:3001/api/v1/products/172/details
+
+###
+GET  http://localhost:3001/api/v1/products/catagory/list
+###
+GET  http://localhost:3001/api/v1/products/admin/catagory/list
+###
+GET  http://localhost:3001/api/v1/products/admin/list/0/0
+###
+
+GET  http://localhost:3001/api/v1/products/gen/pdf/list
+###
+GET http://localhost:3001/api/v1/products/download/zip 
+
+###
+GET  http://localhost:3001/api/v1/products/1/imran/pdf
+
+###
+GET  http://localhost:3000/api/v1/quotation/price/list/9
+###
+# A 1
+# S 2 5 16 
+# c 3 4 7
+GET http://localhost:3000/api/v1/equip/login/2
+
+###

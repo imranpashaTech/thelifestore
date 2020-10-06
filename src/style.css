@@ -1,0 +1,264 @@
+/* .container {
+    width: 135% !important;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+
+/* Modal window styles */
+.modal-dialog{
+    margin-top: 20% !important ;
+  }
+  .modal-footer{
+    border-top: 0px solid #e5e5e5 !important;
+  
+  }
+  .modal-title{
+    font-size: 135% !important;
+    color: black !important;
+  }
+  .modal-header {
+    border-bottom: 0px solid #e5e5e5 !important;
+    padding: 25px !important;
+    display: unset !important;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase !important;
+  }
+  .modal-body{
+    font-size:110% !important;
+    padding: 25px !important;
+    margin-top: -5% !important;
+    margin-bottom: -5% !important;
+    text-transform: inherit !important;
+    font-family: 'Barlow', sans-serif;
+  }
+  .body-text{
+      padding-top:15px !important
+  }
+
+.items{
+    padding-top: 4%;
+}
+.text-right{
+    float: right;
+}
+.text-center{
+    float: center;
+}
+.text-left{
+    float: left;
+}
+.features{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.item-description{
+    padding: 5%;
+    text-transform:inherit;
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    color:#858585;
+}
+.feature-items{
+    text-transform:inherit;
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    padding-left: 6%;
+    padding-bottom: 5%;
+    color:#858585;
+}
+
+.cursor-pointer {cursor: pointer;}
+/* common **ip** */ 
+
+/* .container{
+    max-width: 1440px !important;
+} */
+@media (min-width:1500px){
+    .container{
+        max-width: 1440px !important;
+    }
+}
+
+.min-w-80 {
+    min-width: 80%;
+}
+
+img{
+    background: #f2f2f2;
+    background-origin: content-box;
+    background-clip: content-box;
+}
+
+.title{
+    text-transform: uppercase;
+    font-family: 'Barlow', sans-serif;
+    font-size: 24px;
+    color:#858585;
+    font-weight: bold;
+ }
+
+ .cursor-pointer{
+    cursor: pointer;
+  }
+
+ .content{
+     text-transform:inherit;
+     font-size: 16px;
+     font-family: 'Barlow', sans-serif;
+     color:#858585;
+     font-weight: 400 !important;
+ }
+
+ .font-weight-bold{
+    font-weight: 500 !important;
+    font-family: 'Barlow', sans-serif;
+}
+
+ /**  Product Details Page **/
+.list-group-item:first-child {
+    border-top-left-radius: .0rem !important; 
+    border-top-right-radius: .0rem !important;
+    font-family: 'Barlow', sans-serif;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 55px;
+    font-size: 55px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.backbutton{
+    position: fixed;
+     top: 15px;
+     left: 55px;
+     font-size: 28px;
+     margin-right: 50px;
+     cursor: pointer;
+     /* border:1px solid black; */
+     /* background: black; */
+ }
+
+ .product_addbutton{
+    position: fixed;
+    top: 15px;
+    right: 55px;
+    cursor: pointer;
+    border: 1px solid black;
+    background:white
+ }
+ /* .btn-default{
+     border:1px solid black !important;
+     background:white !important;
+     color:black !important;
+ } */
+ .back-button{
+    border:1px solid black !important;
+    background:white !important;
+    color:black !important;
+ }
+
+section {
+    width: 100%;
+}
+
+.logo{
+    width:100% !important;
+    margin-top:0% !important;
+    background: none;
+  }
+
+ 
+.email{
+    font-size: small;
+    font-family: 'Barlow', san-serif;
+    margin-top: 0% !important;
+}
+
+/* .v-switch-core{
+    background-color: #858585 !important;
+} */
+.btn-primary{
+    font-size: 0.9rem !important;
+    text-transform: uppercase !important;
+    border: 1px solid black !important;
+    color:black !important;
+    background:white !important;
+}
+
+.sticky-sidemenu {
+    position: sticky;
+    top: 50px;
+}
+
+@media only screen and (max-width: 920px) {
+    .container {
+      max-width: 720px;
+    }
+}
+
+  /* override the boostrap class */
+  .owl-dots{
+        display: none;
+    }
+
+    li.border-top{
+        border-top-style: dotted !important;
+    }
+    .product-bg-image{
+        height:auto !important;
+        /* height: 150px !important; */
+    }
+    .brand-bg-image{
+        /* height: 250px !important; */
+        height: auto !important;
+    }
+    .table td, .table th {
+        padding: .75rem;
+        vertical-align: top;
+        border: 1px solid #e5e5e5;
+    }
+    th{
+        text-align:center;
+        font-weight: bold;
+        font-size: 110%;
+    }
+    td{
+        text-align:center;
+    }
+
+    .btn-disabled{
+        color:#fff;
+        background:lightgray;
+        border-color:lightgray;
+        cursor:not-allowed;
+        text-transform: uppercase;
+    }
+    .btn-disabled:hover{
+        color:#fff;
+        background:lightgray;
+        border-color:lightgray;
+        text-transform: uppercase;
+        cursor:not-allowed;
+    }
+
+    .notices .toast-success {
+        background-color: white !important;
+        border:0.5px solid black;
+        color:black;
+    }
+    .notices .toast-error {
+        background-color: white !important;
+        border:0.5px solid black;
+        color:black;
+    }
+
+
+    /* body {
+        background: #0073c5 !important;
+      } */
+
+      /* .container {
+          background: #ffffff;
+      } */
