@@ -26,7 +26,9 @@
                     <div class="col" >
                         <div class="row">
                             <div class="col-3  p-0"  v-for="(product, index) in productDetails.images" :key="index">
-                                <img src="@/assets/prod.jpg"  :alt="productDetails.product_name" @click="updateImg(index)" class="w-100 p-2 cursor-pointer"/> 
+                               <router-link to="/catagory/product/12">
+                                    <img src="@/assets/prod.jpg"  :alt="productDetails.product_name" @click="updateImg(index)" class="w-100 p-2 cursor-pointer"/> 
+                               </router-link>
                                 <!-- <img src="@/assets/KWorkTech_new_logo.jpg"  :alt="productDetails.product_name" @click="updateImg(index)" class="w-100 p-2 cursor-pointer"/>  -->
                             </div>
                         </div>
@@ -79,7 +81,6 @@
                               <div class="col-3 text-right border-right border-dark">
                                   <!-- {{comment.user_id}} -->
                                  <img src="@/assets/profile.png" alt="prdfe"  class="w-50 p-2 cursor-pointer"/> 
-
                                 </div>
                               <div class="col-9 border" >{{comment.comment}}</div>
                           </div>                           

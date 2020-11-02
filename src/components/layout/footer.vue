@@ -36,18 +36,12 @@
               </div>
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-                  <ul class="list-unstyled list-inline social text-center">
-                    <li  class="list-inline-item"><font-awesome-icon icon="user-secret" /></li>
-                    <!-- <li  class="list-inline-item"><font-awesome-icon icon="facebook" /></li> -->
-                    <!-- <li><font-awesome-icon icon="facebook" /></li> -->
-                    <!-- <i class="fas fa-camera"></i> -->
-
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
-                  </ul>
+                  <div class="col-6 col-md-4 m-auto text-center d-flex">
+                       <a href="#"><img src="@/assets/social/facebook.png" alt="life" class="w-25"></a> 
+                       <a href="#"><img src="@/assets/social/instagram.png" alt="life" class="w-25"></a> 
+                       <a href="#"><img src="@/assets/social/medium.png" alt="life" class="w-25"></a> 
+                       <a href="#"><img src="@/assets/social/pinterest.png" alt="life" class="w-25"></a> 
+                  </div>
                 </div>
                 <hr>
               </div>	
@@ -60,9 +54,11 @@
               </div>	
             </div>
                 <font-awesome-icon icon="user-secret" />
+                  <button @click="topFunction()"  title="Go to top">
+                    <a title="Back to top" id="myBtn" href="#">&#10148;</a>
+                </button>
           </footer>
           <!-- ./Footer -->
-  
 </template>
 <script>
 

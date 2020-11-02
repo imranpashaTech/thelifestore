@@ -11,7 +11,10 @@ import Reg from "@/components/authentication/reg";
 import Home from "@/pages/site/Home";
 import Product from "@/pages/site/Product";
 import catagoryProduct from "@/pages/site/catagoryProduct";
-import Aboutus from "@/pages/site/About-us"
+import Aboutus from "@/pages/site/About-us";
+import Contact from "@/pages/site/Contact";
+
+import Blog_Home from "@/pages/blog/Home";
 
 import AddProduct from "@/pages/admin/Product";
 import ProductList from "@/components/admin/Product-list"
@@ -36,6 +39,16 @@ export default new VueRouter({
           path: '/about',
           name: 'About-us',
           component: Aboutus
+        },
+        {
+          path: '/contact',
+          name: 'Contact',
+          component: Contact
+        },
+        {
+          path: '/blog/home',
+          name: 'Blog_Home',
+          component: Blog_Home
         },
         {
           path: '/reg',

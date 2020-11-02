@@ -15,7 +15,9 @@
             <div class="row col pt-4">
               <div class="row"> 
                 <div class="col-lg-4 col-md-4 col-sm-6 col-12 p-2 "  v-for="(product, i)  in productList.list" :key="product.brand_id">
-                  <app-product-card :id="product.product_id" :pos="i" :in_data="product"   v-on:storeSelProduct = "storeSelProduct" v-on:addProductList = "addProductWatchList" v-on:removeProductList = "removeProductWatchList"></app-product-card>
+                  <router-link to="/catagory/product/12">
+                    <app-product-card :id="product.product_id" :pos="i" :in_data="product"   v-on:storeSelProduct = "storeSelProduct" v-on:addProductList = "addProductWatchList" v-on:removeProductList = "removeProductWatchList"></app-product-card>
+                  </router-link>
                 </div>
               </div>            
             </div>
@@ -27,25 +29,13 @@
 <script>
 // components
 import ProductCard from '@/components/common/product-card'
-// import sideNav from '@/components/layout/side-nav'
-// import smSideNav from '@/components/layout/sm-side-nav'
-// import ProductView from '@/pages/site/Product'
-import ProductService from '../../shared/services/product.service'
-// import carousel from 'vue-owl-carousel'
-import {globalMixin,ontimeMixin} from '@/mixin.js'
 
-const productService = new ProductService();
 
 
 export default {
-  mixins: [globalMixin,ontimeMixin],
   name: 'Home',
   components: {
     'app-product-card': ProductCard,
-    // 'app-product-view': ProductView,
-    // 'app-side-nav': sideNav,
-    // 'app-sm-side-nav': smSideNav,
-    // 'carousel': carousel,
   },
   props: {
     msg: String,
@@ -58,17 +48,9 @@ export default {
         catagory_obj:{},
         catagory_list:[],
         catagory_prod_list:{},
-        selected_download:this.$selected_download,
-        productList:this.$store_app_data,
-        sc_id:0,
-        mc_id:0,
-        loading_flag : 1,
-        download_loading_flag : 1,
-        select_collection:"My Collection",
-        status_hide : 2,  //info: used to hide the check box while download,
-        filter:{
-            name:'/'
-        },
+        productList:{}
+
+
       }
     },
   methods: {
@@ -78,89 +60,17 @@ export default {
                     behavior: 'smooth'
                 });
       },
-      getProductList(mc_id,sc_id) {
-        this.productList.list=[]
-        productService.getProductList(mc_id,sc_id)
-        .then(response => {
-          this.productList = response.data.output.success[0].data;
-          this.productList = this.check_is_sel_prod(this.productList);
-        })
-        .catch(e => {
-          this.errors.push(e)
-        }) 
-        
-        // this.setCollection(sel_name);
-      },
 
       goto(){
                 this.goto_last_product();
       },
-
-
-      storeSelProduct(product,i){
+       storeSelProduct(product,i){
         // :to="'product/'+in_data.product_id"
         this.set_store_sel_product(product,i);
-        this.$router.push({path:'product/'+product.product_id})
+        this.$router.push({path:'catagory/product/'+product.product_id})
 
-      },
- 
-      downloadZip(){
-
-          this.download_loading_flag = 0;
-          let obj = {"product_list" : this.selected_download};
-
-          productService.downloadZip(obj)
-          .then( async response => {
-
-
-            const blob = new Blob([response.data], { type: 'application/zip' })
-            const link = document.createElement('a')
-            link.href = URL.createObjectURL(blob)
-            link.download = "kworktech.zip"
-            link.click()
-            URL.revokeObjectURL(link.href)
-          this.download_loading_flag = 1;
-
-          })
-          .catch(e => {
-          this.download_loading_flag = 1;
-
-              this.toast.error("Error occured while adding",{
-                  position:'top-right'
-              })  
-                this.errors.push(e)
-          })
-
-      },
-
-      sel_dwn_prod(e,pos){
-        let status = e.target.checked;
-
-        if(this.selected_download[pos].d_2d != this.status_hide) 
-          this.selected_download[pos].d_2d = status;
-
-        if(this.selected_download[pos].d_3d != this.status_hide) 
-          this.selected_download[pos].d_3d = status;
-
-          this.selected_download[pos].d_pdf = status ;
-      },
-
-      setCollection(sel_name){
-        this.select_collection = sel_name;
-      },
-
-      setProductList(){
-           console.log("this is setProductList outside .... ",this);
-      },
-      
-      set_loading_flag(flag){
-           console.log("this is set_loading_flag outside .... ",flag);
-           this.loading_flag = flag;
-      },
-
-      about(){
-           this.$router.push({path:'/about'})
       }
+       
   },
   
   created() {
@@ -181,66 +91,76 @@ export default {
                 this.catagory_obj = element;
             });
 
-    // this.logMsg();
-    // this.setStatus(2);
-    // this.logMsg();
-   
-
-    // let loc_this =this;
-    // console.log("this is outside .... ",this);
-
-    
-    // console.log("first_status",this.$first_status);
-    // console.log("appName",this.productList);
-
-    // if(this.$first_status){
-    //   // this.getProductList(this.mc_id,this.sc_id);
-    //     let out_data;
-
-    //    productService.getProductList(this.mc_id,this.sc_id)
-    //   .then( (response) => {
-        
-    //     console.log(loc_this,"this is inside .... ",this);
-
-    //           out_data = response.data.output.success[0].data;
-    //           this.set_loading_flag(0);
-    //           this.productList = out_data;
-
-    //           // if(this.productList.new){
-    //           //   this.productList.new.forEach(element => {
-    //           //       element['product_status']='new' 
-    //           //   });
-    //           // this.set_first_status(0);
-    //           // }
-    //           this.set_first_status(0);
-    //           this.set_store_app_data(this.productList);
-
-    //   })
-    //   .catch((e) => {
-    //   loc_this.errors.push(e)
-    //   })  
-
-      
-
-    // }else{
-    //   this.productList = this.$store_app_data;
-    //   this.set_loading_flag(0);
-    // }
-
-    // this.getElement();
-    // window.onscroll = function() {this.scrollFunction()};
-
-    
+            this.productList.list=[{
+              brand_id:	1,
+              brand_desc:	"Actiu",
+              main_category_id:	3,
+              sub_category_id:	41,
+              product_id:	748,
+              threed_file_url:	null,
+              twod_file_url:	null,
+              selected:	0,
+              product_status:	"new",
+              product_name:	"TALENT 500",
+              product_desc:	"Talent is a mobile, foldable and height-adjustable desk system that doesn't need any electrical connection.",
+              product_images_url:	"./images/products/TALENT 500_1.jpg"
+            },{
+              brand_id:	1,
+              brand_desc:	"Actiu",
+              main_category_id:	3,
+              sub_category_id:	41,
+              product_id:	748,
+              threed_file_url:	null,
+              twod_file_url:	null,
+              selected:	0,
+              product_status:	"new",
+              product_name:	"TALENT 500",
+              product_desc:	"Talent is a mobile, foldable and height-adjustable desk system that doesn't need any electrical connection.",
+              product_images_url:	"./images/products/TALENT 500_1.jpg"
+            },{
+              brand_id:	1,
+              brand_desc:	"Actiu",
+              main_category_id:	3,
+              sub_category_id:	41,
+              product_id:	748,
+              threed_file_url:	null,
+              twod_file_url:	null,
+              selected:	0,
+              product_status:	"new",
+              product_name:	"TALENT 500",
+              product_desc:	"Talent is a mobile, foldable and height-adjustable desk system that doesn't need any electrical connection.",
+              product_images_url:	"./images/products/TALENT 500_1.jpg"
+            },{
+              brand_id:	1,
+              brand_desc:	"Actiu",
+              main_category_id:	3,
+              sub_category_id:	41,
+              product_id:	748,
+              threed_file_url:	null,
+              twod_file_url:	null,
+              selected:	0,
+              product_status:	"new",
+              product_name:	"TALENT 500",
+              product_desc:	"Talent is a mobile, foldable and height-adjustable desk system that doesn't need any electrical connection.",
+              product_images_url:	"./images/products/TALENT 500_1.jpg"
+            },{
+              brand_id:	1,
+              brand_desc:	"Actiu",
+              main_category_id:	3,
+              sub_category_id:	41,
+              product_id:	748,
+              threed_file_url:	null,
+              twod_file_url:	null,
+              selected:	0,
+              product_status:	"new",
+              product_name:	"TALENT 500",
+              product_desc:	"Talent is a mobile, foldable and height-adjustable desk system that doesn't need any electrical connection.",
+              product_images_url:	"./images/products/TALENT 500_1.jpg"
+            }]
   },
 
   mounted(){
-    // this.$nextTick(function () {
-    //     // DOM is now updated
-    //     // `this` is bound to the current instance
-    //     this.goto_last_product();
-    // //   })
-    //   this.goto();
-      // window.onscroll = function() {this.scrollFunction()}
+
    
   }
 }
@@ -259,7 +179,6 @@ export default {
   left: 0;
   right: 0;
   color: #fff;
-  /* visibility: hidden; */
   opacity: 1;
 
   /* transition effect. not necessary */
