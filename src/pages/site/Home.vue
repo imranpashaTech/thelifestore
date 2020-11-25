@@ -3,18 +3,27 @@
 
   <section class="row m-0 ">
     <div class="col-md-12 p-0">                 
-      <carousel class="row" :autoplay="true" :nav="false" :dots="false" :responsive="{0:{items:1,nav:false},720:{items:1,nav:false},1000:{items:1,nav:false}}">
-        <template slot="prev"><span class="prev"> <h1> C </h1> </span></template>
-        <template slot="next"><span class="next"><h1>></h1></span></template>  
+      <carousel class="row" :autoplay="true" :nav="false" :dots="false" :responsive="{0:{items:1,nav:true},720:{items:1,nav:true},1000:{items:1,nav:false}}">
+        <template slot="prev" ><span class="prev d-none d-lg-block"> <img src="@/assets/Right.png" alt="life" class="w-100"/> </span></template>
+        <template slot="next" ><span class="next d-none d-lg-block"> <img src="@/assets/Right.png" alt="life" class="w-100"/> </span></template>  
         <div class="p-0" >
-          <img src="@/assets/slider/Hartley-Chair-Banner.jpg" alt="life" class="w-100">
+          <img src="@/assets/slider/05Nov_Jashn_e_jaypore_slider.jpg" alt="life" class="w-100">
         </div> 
         <div class="p-0"  >
-          <img src="@/assets/slider/slider2.jpg" alt="life" class="w-100">
+          <img src="@/assets/slider/5599_201052014_PURPLE_Outright_slider.jpg" alt="life" class="w-100">
         </div>
         <div class="p-0"  >
-          <img src="@/assets/slider/slider2.jpg" alt="life" class="w-100">
+          <img src="@/assets/slider/20201031_Lamp_slider.jpg" alt="life" class="w-100">
         </div>
+        <div class="p-0"  >
+          <img src="@/assets/slider/5245200819020_Suresh_Hand_Print_Outright_slider.jpg" alt="life" class="w-100">
+        </div>
+        <div class="p-0"  >
+          <img src="@/assets/slider/5345200918021_RAVISHING_CREATIONS_slider.jpg" alt="life" class="w-100">
+        </div>
+        <!-- <div class="p-0"  >
+          <img src="@/assets/slider/slider2.jpg" alt="life" class="w-100">
+        </div> -->
                        
       </carousel> 
     </div> 
@@ -66,8 +75,8 @@
     </div>
     <div class="col-12">                 
       <carousel class="row" :autoplay="true" :nav="false" :responsive="{0:{items:2},720:{items:3},1000:{items:4}}">
-        <template slot="prev"><span class="prev"> <h1> C </h1> </span></template>
-        <template slot="next"><span class="next"><h1>></h1></span></template>  
+        <template slot="prev" ><span class="prev d-none d-lg-block"> <img src="@/assets/Right.png" alt="life" class="w-100"/> </span></template>
+        <template slot="next" ><span class="next d-none d-lg-block"> <img src="@/assets/Right.png" alt="life" class="w-100"/> </span></template> 
         <div class="p-2" >
           <img src="@/assets/prod.jpg"  alt="chair" style="width:100%;">
         </div>
@@ -175,12 +184,12 @@ export default {
 .prev,.next{
   position: absolute;
   top: 50%;
-  background: gray;
   z-index: 2;
   padding: 0 15px 0 15px;
 }
 .prev{
   left: 2%;
+  transform: rotate(180deg);
 }
 .next{
   right: 2%;

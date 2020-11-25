@@ -8,9 +8,9 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <router-link  class="nav-link" to="/about">About</router-link>
-                    </li>
+                    </li> -->
                     <li class="nav-item ">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown link
@@ -18,24 +18,24 @@
                         <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdownMenuLink">
                             <div >
                                 <div class="row" style="width:1000px;">
+                                    <div class="col-md-4"> 
+
+                                        <h4><a class="dropdown-item" href="#">Art & Craft</a></h4>
+                                        <a class="dropdown-item" href="#">Cherial Art</a>
+                                        <a class="dropdown-item" href="#">Batik Paintings</a>
+                                        <a class="dropdown-item" href="#">Kondapalli Toys</a>
+                                    </div>
                                     <div class="col-md-4">
+                                        <h4><a class="dropdown-item" href="#">Clothing</a></h4>
+                                        <a class="dropdown-item" href="#">Clothing -1</a>
+                                        <a class="dropdown-item" href="#">Clothing col-12</a>
+                                    </div>
+                                    <!-- <div class="col-md-4">
                                         <h4><a class="dropdown-item" href="#">Cherial mask</a></h4>
                                         <a class="dropdown-item" href="#">Action</a>
                                         <a class="dropdown-item" href="#">Another action</a>
                                         <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h4><a class="dropdown-item" href="#">Cherial mask</a></h4>
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <h4><a class="dropdown-item" href="#">Cherial mask</a></h4>
-                                        <a class="dropdown-item" href="#">Action</a>
-                                        <a class="dropdown-item" href="#">Another action</a>
-                                        <a class="dropdown-item" href="#">Something else here</a>
-                                    </div>
+                                    </div> -->
                                     
                                 </div>
                                

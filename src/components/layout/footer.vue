@@ -37,10 +37,11 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
                   <div class="col-6 col-md-4 m-auto text-center d-flex">
-                       <a href="#"><img src="@/assets/social/facebook.png" alt="life" class="w-25"></a> 
-                       <a href="#"><img src="@/assets/social/instagram.png" alt="life" class="w-25"></a> 
-                       <a href="#"><img src="@/assets/social/medium.png" alt="life" class="w-25"></a> 
-                       <a href="#"><img src="@/assets/social/pinterest.png" alt="life" class="w-25"></a> 
+                       <a href="https://www.facebook.com/Life-100910538491130/?modal=admin_todo_tour
+" target="_blank"><img src="@/assets/social/facebook.png" alt="life" class="w-25"></a> 
+                       <a href="https://www.instagram.com/lifethestore/"  target="_blank"><img src="@/assets/social/instagram.png" alt="life" class="w-25"></a> 
+                       <a href="#"  target="_blank"><img src="@/assets/social/medium.png" alt="life" class="w-25"></a> 
+                       <a href="https://in.pinterest.com/lifethestore/"  target="_blank"><img src="@/assets/social/pinterest.png" alt="life" class="w-25"></a> 
                   </div>
                 </div>
                 <hr>
@@ -48,14 +49,13 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
                   <!-- <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p> -->
-                  <p class="h6">© All right Reversed.<a class="text-green ml-2" href="#" target="_blank">life.</a></p>
+                  <p class="h6">© 2020 <a class="text-green ml-2" href="www.lifethestore.com" target="_blank">www.lifethestore.com.</a></p>
                 </div>
                 <hr>
               </div>	
-            </div>
-                <font-awesome-icon icon="user-secret" />
+            </div>   
                   <button @click="topFunction()"  title="Go to top">
-                    <a title="Back to top" id="myBtn" href="#">&#10148;</a>
+                    <a title="Back to top" id="myBtn" href="#"><img src="@/assets/back_to_top.png" alt="life" class="w-25"></a>
                 </button>
           </footer>
           <!-- ./Footer -->
