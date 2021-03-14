@@ -20,11 +20,11 @@ content-type: application/json
 }
 
 ###
-POST http://localhost:3001/api/v1/products/create/main/category
+POST http://localhost:3001/api/v1/users/subscribe
 content-type: application/json
 
 {
-    "main_category_name":"mc_3"
+    "email_id":"Navneet@madlab.in"
 }
 
 ###

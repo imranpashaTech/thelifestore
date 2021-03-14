@@ -2,6 +2,7 @@ var session = require('../helper/session');
 const pool = require('../helper/config');
 const globalConst = require('../const/globalConst');
 const query = require('../const/query');
+const Mailer = require('../helper/mailer');
 
 
 module.exports = class Users {
@@ -38,6 +39,24 @@ module.exports = class Users {
 
   get userDetails() {
     return this._userDetails;
+  }
+
+  async subscribeEmail(in_data) {
+
+    const mailer = new Mailer();
+
+    mailer.sendeMail({
+      from: 'test', // sender address
+      to: in_data.email_id, // list of receivers
+      subject: 'test', // Subject line
+      html: `<h1>Hello</h1>
+      <img src="https://media.giphy.com/media/RDOROM6Au8IoKoyK88/giphy.gif" alt="test">`// html body
+    }).then((result) => {
+      console.log(result.messageId);
+    }).catch((err) => {
+      console.log(err);
+    });
+    return { sucess : "sucess"}
   }
 
   // async login() {
@@ -666,6 +685,8 @@ module.exports = class Users {
     
   //   return status;
   // }
+
+
 
   // async verifyForgotPassword(id) {
   //   let status = null;

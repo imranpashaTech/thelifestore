@@ -1,62 +1,66 @@
 <template>
      <!-- Footer -->
-          <footer id="footer">
+          <footer id="footer" class="bgsecondary ">
             <div class="container p-5">
-              <div class="row text-center text-xs-center text-sm-left text-md-left">
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                  <h5>Quick links</h5>
-                  <ul class="list-unstyled quick-links">
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>About</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+              <div class="row text-center">
+                <div class="col-12 my-3">
+                  <ul class="list-unstyled quick-links txtprimary d-flex justify-content-center">
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle bgprimary txtsecondary p-2" href="https://www.facebook.com/Life-100910538491130/?modal=admin_todo_tour">
+                            <i class="icon-social-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle  bgprimary txtsecondary p-2" href="https://www.instagram.com/lifethestore/">
+                            <i class="icon-social-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle bgprimary txtsecondary p-2" href="https://in.pinterest.com/lifethestore/">
+                            <i class="icon-social-pinterest"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="social-link rounded-circle bgprimary txtsecondary p-2" href="#!">
+                            <i class="icon-social-twitter"></i>
+                        </a>
+                    </li>
                   </ul>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                  <h5>Quick links</h5>
-                  <ul class="list-unstyled quick-links">
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>About</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Videos</a></li>
-                  </ul>
-                </div>
-                <div class="col-xs-12 col-sm-4 col-md-4">
-                  <h5>Quick links</h5>
-                  <ul class="list-unstyled quick-links">
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Home</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>About</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-                    <li><a href="#"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
-                    <li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+                <div class="col-12">
+                  <ul class="list-unstyled quick-links txtprimary d-flex flex-column flex-md-row justify-content-center">
+                    <li class="px-3 border-right"><a href="#" class="txtprimary"><i class="fa fa-angle-double-right"></i>Home</a></li>
+                    <li class="px-3 border-right"><a href="#" class="txtprimary"><i class="fa fa-angle-double-right"></i>About</a></li>
+                    <li class="px-3 border-right"><a href="#" class="txtprimary"><i class="fa fa-angle-double-right"></i>Contact</a></li>
+                    <li class="px-3 border-right"><a href="#" class="txtprimary"><i class="fa fa-angle-double-right"></i>Order Tracking</a></li>
+                    <li class="px-3 border-right"><a href="#" class="txtprimary"><i class="fa fa-angle-double-right"></i>FAQs</a></li>
+                    <li class="px-3 "><a href="#" class="txtprimary"><i class="fa fa-angle-double-right"></i>Blog</a></li>
                   </ul>
                 </div>
               </div>
-              <div class="row">
+              <!-- <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
                   <div class="col-6 col-md-4 m-auto text-center d-flex">
                        <a href="https://www.facebook.com/Life-100910538491130/?modal=admin_todo_tour
-" target="_blank"><img src="@/assets/social/facebook.png" alt="life" class="w-25"></a> 
-                       <a href="https://www.instagram.com/lifethestore/"  target="_blank"><img src="@/assets/social/instagram.png" alt="life" class="w-25"></a> 
-                       <a href="#"  target="_blank"><img src="@/assets/social/medium.png" alt="life" class="w-25"></a> 
-                       <a href="https://in.pinterest.com/lifethestore/"  target="_blank"><img src="@/assets/social/pinterest.png" alt="life" class="w-25"></a> 
+" target="_blank" class="txtprimary"><img src="@/assets/social/facebook.png" alt="life" class="w-25"></a> 
+                       <a class="txtprimary" href="https://www.instagram.com/lifethestore/"  target="_blank"><img src="@/assets/social/instagram.png" alt="life" class="w-25"></a> 
+                       <a class="txtprimary" href="#"  target="_blank"><img src="@/assets/social/medium.png" alt="life" class="w-25"></a> 
+                       <a class="txtprimary" href="https://in.pinterest.com/lifethestore/"  target="_blank"><img src="@/assets/social/pinterest.png" alt="life" class="w-25"></a> 
                   </div>
                 </div>
                 <hr>
-              </div>	
+              </div>	 -->
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center">
                   <!-- <p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p> -->
-                  <p class="h6">© 2020 <a class="text-green ml-2" href="www.lifethestore.com" target="_blank">www.lifethestore.com.</a></p>
+                  <p class="h6 txtprimary">© 2020 | <a class="txtprimary ml-2" href="www.lifethestore.com" target="_blank">www.lifethestore.com</a></p>
                 </div>
                 <hr>
               </div>	
             </div>   
-                  <button @click="topFunction()"  title="Go to top">
-                    <a title="Back to top" id="myBtn" href="#"><img src="@/assets/back_to_top.png" alt="life" class="w-25"></a>
-                </button>
+                  <!-- <button @click="topFunction()"  title="Go to top"> -->
+                    <a title="Back to top" id="myBtn" href="#"><img src="@/assets/back_to_top.png" alt="life" @click="topFunction()" class="mv2tp"></a>
+                <!-- </button> -->
           </footer>
           <!-- ./Footer -->
 </template>
@@ -81,7 +85,9 @@ import ProductService from '../../shared/services/product.service'
                 isSubActive:0,
                 isCreateProd:false,
                 isProductList:false,
-                isClearAll:false
+                isClearAll:false,
+                myBtn:String,
+                year:2020,
             }
           
         },
@@ -96,6 +102,10 @@ import ProductService from '../../shared/services/product.service'
         },
         created() {
             console.log("aaaa");
+            this.myBtn = document.getElementById("myBtn");
+            window.onscroll = () => {this.scrollFunction()};
+
+           
             // this.isLogin();
             // this.activeItem=0;
             // this.getCategories();
@@ -106,6 +116,18 @@ import ProductService from '../../shared/services/product.service'
         },
         
         methods:{
+
+            scrollFunction(){
+                if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                    this.myBtn.style.display = "block";
+                } else {
+                    this.myBtn.style.display = "none";
+                }
+            },
+             topFunction() {
+                document.body.scrollTop = 0;
+                document.documentElement.scrollTop = 0;
+            },
             getCategories() {
                 productService.getCategoriesList()
                 .then(response => {
@@ -147,6 +169,7 @@ import ProductService from '../../shared/services/product.service'
                 // this.$router.push('/admin/productlist')
             },
 
+            
             toggleSubCat(event,mainCat){
                 this.isSubActive = event
                 this.isActive = mainCat
@@ -184,6 +207,7 @@ import ProductService from '../../shared/services/product.service'
 </script>
 
 <style scoped>
+@import url("../../css/simple-line-icons.css");
 .list-group-item{
     border: none;
     line-height: 1.8;
@@ -255,5 +279,11 @@ a:hover{
 .sticky-sidemenu {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
+}
+.mv2tp{
+    width:50px;
+    position: fixed;
+    bottom: 1%;
+    right: 1%;
 }
 </style>

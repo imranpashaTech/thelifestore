@@ -1,5 +1,5 @@
 <template>
-  <div class="home  p-3 mx-auto">
+  <div class="home  p-3 mx-auto bgprimary">
 
   <section class="row m-0 ">
     <div class="col-md-12 p-0">                 
@@ -78,22 +78,22 @@
         <template slot="prev" ><span class="prev d-none d-lg-block"> <img src="@/assets/Right.png" alt="life" class="w-100"/> </span></template>
         <template slot="next" ><span class="next d-none d-lg-block"> <img src="@/assets/Right.png" alt="life" class="w-100"/> </span></template> 
         <div class="p-2" >
-          <img src="@/assets/prod.jpg"  alt="chair" style="width:100%;">
+          <img src="@/assets/prod/mask.jpg"  alt="chair" style="width:100%;">
         </div>
         <div class="p-2" >
-          <img src="@/assets/prod.jpg"  alt="chair" style="width:100%;">
+          <img src="@/assets/prod/p21.jpg"  alt="chair" style="width:100%;">
         </div> 
         <div class="p-2" >
-          <img src="@/assets/prod.jpg"  alt="chair" style="width:100%;">
+          <img src="@/assets/prod/mask2.jpg"  alt="chair" style="width:100%;">
         </div> 
         <div class="p-2" >
-          <img src="@/assets/prod.jpg"  alt="chair" style="width:100%;">
+          <img src="@/assets/prod/p22.jpg"  alt="chair" style="width:100%;">
         </div>
         <div class="p-2" >
-          <img src="@/assets/prod.jpg"  alt="chair" style="width:100%;">
+          <img src="@/assets/prod/mask3.jpg"  alt="chair" style="width:100%;">
         </div> 
         <div class="p-2" >
-          <img src="@/assets/prod.jpg"  alt="chair" style="width:100%;">
+          <img src="@/assets/prod/p23.jpg"  alt="chair" style="width:100%;">
         </div>   
       </carousel> 
     </div> 
@@ -107,9 +107,9 @@
             <h2>BE THE FIRST TO KNOW </h2>
             <h5 class="py-2">Subscribe to the <b>life.</b> Newsletter to get timely updates on products & trends.</h5>
             <div class="input-group">
-              <input type="email" class="form-control" placeholder="Enter your email">
+              <input type="email" class="form-control" v-model="subcription.email_id" placeholder="Enter your email">
               <span class="input-group-btn">
-                <button type="button" class="btn btn-secondary">Subscribe Now</button>
+                <button type="button" class="btn btn-secondary" @click="subscribeNewsletter()">Subscribe Now</button>
               </span>
             </div>
           </div>
@@ -127,6 +127,9 @@
 // components
 
 import carousel from 'vue-owl-carousel'
+import UserService from '../../shared/services/user.service' 
+    
+const userService = new UserService()
 
 export default {
   name: 'Home',
@@ -139,6 +142,7 @@ export default {
   },
    data() {
       return {
+        subcription : {},
       }
     },
   methods: {
@@ -148,6 +152,22 @@ export default {
                     behavior: 'smooth'
                 });
       },
+    subscribeNewsletter(){
+
+        // let obj = {
+        //   email_id : "imranpasha.cbit@gmail.com"
+        // }
+        userService.subscribeNewsletter(this.subcription)
+        .then(response => {
+            this.subcription = {};
+            alert("Sucesfully registered");
+            console.log("hello response hello ",response);
+        })
+        .catch(e => {
+          alert("error try again");
+            console.log("error is error error",e);
+        })
+    }
   },
   
   created() {

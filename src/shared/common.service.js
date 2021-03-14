@@ -44,4 +44,9 @@ export const ServiceURLs = {
     getProductList:"products/list/",
     getProductAdminList:"products/admin/list/",
     getProductDetails:"products/",
+
+//life
+    subscribeNewsletter:"users/subscribe",
+
+
 }

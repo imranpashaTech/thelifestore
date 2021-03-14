@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
         <div class="row navbar col-12 col-lg-10 m-auto">
-            <router-link  to="/" class="navbar-brand" href="">The Life</router-link>
+            <router-link  to="/" class="navbar-brand" href="">
+                <img src="@/assets/logo.jpg"  class="w-50" alt="life. logo">
+            </router-link>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

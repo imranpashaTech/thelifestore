@@ -8,7 +8,7 @@
                 <a href="javascript:void(0)" class="closebtn" @click="closeNav()">&times;</a>
                 <div class="sub-heading  pl-4" :id="filter.name">
                     <div class="col pb-2">
-                        <img class="w-75 bg-white" src="@/assets/KWorkTech_new_logo.jpg">
+                        <!-- <img class="w-75 bg-white" src="@/assets/KWorkTech_new_logo.jpg"> -->
                     </div> 
                     <div class="small pb-5">
                          <div class="email"><a class="email" href="mailto:george.browny@kaizenworktech.com">george.browny@kaizenworktech.com</a></div>

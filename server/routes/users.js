@@ -29,6 +29,21 @@
   
     });
   });
+
+  router.post('/subscribe', (req, res) => {
+      
+  
+  
+    user.subscribeEmail(req.body).then((result) => {
+      console.log("then : "+result);
+      // res.redirect(globalConst.path.login);
+      res.status(200).json(result).end();
+    }).catch((result) => {
+      res.status(200).json(result).end();
+      // res.redirect(globalConst.path.login);
+  
+    });
+  });
   
   router.get('/forgot/pwd/ver/:id', (req, res) => {
       

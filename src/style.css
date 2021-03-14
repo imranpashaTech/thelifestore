@@ -3,6 +3,27 @@
 } */
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 
+:root {
+    --blue: #1e90ff;
+    --secondary-color: #6F3125;
+    --primary-color: #FEFCFB;
+  }
+
+  .bgsecondary{
+      background: var(--secondary-color) !important;
+  }
+  
+  .bgprimary{
+      background: var(--primary-color) !important;
+  }
+  .txtprimary{
+      color: var(--primary-color) !important;
+  }
+  .txtsecondary{
+      color: var(--secondary-color) !important;
+  }
+  
+
 /* Modal window styles */
 .modal-dialog{
     margin-top: 20% !important ;

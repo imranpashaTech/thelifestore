@@ -1,6 +1,6 @@
 module.exports= { 
-   //  username : "imranpashates@gmail.com",
-   //  password : "learnBotCoding",
+    username : "imranpashates@gmail.com",
+    password : "learnBotCoding",
    //  username : "no-reply@equipr.in",
    //  password : "rapidrentals123",
     path:{
