@@ -2,9 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router.js'
 import ToggleButton from 'vue-js-toggle-button'
+import store from '@/store/index'
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { currency } from './currency'
 
 
 import './icons';
@@ -17,6 +20,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 Vue.config.productionTip = false
 Vue.use(ToggleButton)
+Vue.filter('currency', currency)
 
 
 Vue.prototype.$productWatchList = [];
@@ -34,5 +38,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
+  store,
   render: h => h(App),
 }).$mount('#app')

@@ -69,6 +69,7 @@
     </div>      
   </section>
 
+  <!-- Trending Products -->
   <section class="container">
     <div class=" text-center m-3 m-md-5">
       <h3>Trending Products</h3>
@@ -99,6 +100,7 @@
     </div> 
   </section>
 
+  <!-- newsletter -->
   <section class="newsletter bg-light ">
     <div class="content container p-2 p-lg-5 ">
       <div class="row p-2 p-lg-5 ">
